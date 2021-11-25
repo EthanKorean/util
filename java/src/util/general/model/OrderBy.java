@@ -1,4 +1,4 @@
-package util.model;
+package util.general.model;
 
 
 public enum OrderBy {

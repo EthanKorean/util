@@ -1,4 +1,5 @@
-package util;
+
+package util.general;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,7 +11,7 @@ import java.util.Stack;
 
 import org.json.JSONArray;
 
-import util.model.OrderBy;
+import util.general.model.OrderBy;
 
 /**
  * JSONArray객체를 자바배열이나, Collection으로 변환하는 메소드모음

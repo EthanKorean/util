@@ -1,4 +1,4 @@
-package util.model;
+package util.general.model;
 
 public enum DateTimeFormat {
 	DATE_FORMAT1("yyyyMMdd"),
