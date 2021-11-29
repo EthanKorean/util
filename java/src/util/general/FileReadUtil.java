@@ -10,6 +10,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -141,6 +142,29 @@ public class FileReadUtil {
 	public static JSONObject readJSON(BufferedReader reader) throws IOException,NullPointerException{
 		String str = readTextToString(reader);
 		return new JSONObject(str);
+	}//readJSON
+	
+
+	/*
+	 * json array file
+	 * */
+	
+	public static JSONArray readJSONArray(String path) throws IOException{
+		return readJSONArray(new File(path));
+	}//readJSON
+	
+	public static JSONArray readJSONArray(File target) throws IOException{
+		return readJSONArray(new BufferedReader(new FileReader(target)));
+	}//readJSON
+	
+	public static JSONArray readJSONArray(InputStream is) throws IOException,NullPointerException{
+		byte[] bytes = readBinary(is);
+		return new JSONArray(new String(bytes));
+	}//readJSON
+	
+	public static JSONArray readJSONArray(BufferedReader reader) throws IOException,NullPointerException{
+		String str = readTextToString(reader);
+		return new JSONArray(str);
 	}//readJSON
 	
 }//class
